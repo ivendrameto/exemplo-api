@@ -1,0 +1,32 @@
+###
+GET http://localhost:8080/estagio/v1/users
+
+###
+GET http://localhost:8080/estagio/v1/users/1
+
+###
+POST http://localhost:8080/estagio/v1/users
+Content-Type: application/json
+
+{
+  "name": "teste deal",
+  "active" : true,
+  "blocked" : false
+}
+
+###
+PUT http://localhost:8080/estagio/v1/users/1
+Content-Type: application/json
+
+{
+  "nome": "teste deal put"
+}
+
+###
+DELETE http://localhost:8080/estagio/v1/users/1
+
+###
+PATCH http://localhost:8080/estagio/v1/users/1/desbloquear
+
+###
+PATCH http://localhost:8080/estagio/v1/users/2/bloquear

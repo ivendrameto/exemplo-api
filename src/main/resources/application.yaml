@@ -1,0 +1,32 @@
+server:
+  servlet:
+    context-path: /estagio
+
+spring:
+  flyway:
+    url: jdbc:postgresql://localhost:5432/xp4dev_estagio?charSet=LATIN1
+    user: xp4dev_estagio
+    password: iniciar
+  jackson:
+    default-property-inclusion: NON_EMPTY
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/xp4dev_estagio?charSet=LATIN1
+    username: xp4dev_estagio
+    password: iniciar
+  jpa:
+    show-sql: true
+    format-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        enable_lazy_load_no_trans: true
+        event:
+          merge:
+            entity_copy_observer: allow
